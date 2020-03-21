@@ -34,6 +34,7 @@ public class GameManager : MonoBehaviour
         gameOver = false;
         _startScreen.SetActive(false);
         _playScreen.SetActive(true);
+        Cursor.visible = false;
         Cursor.lockState = CursorLockMode.Locked;
     }
 
@@ -52,6 +53,7 @@ public class GameManager : MonoBehaviour
         waveCount = 0;
         targetSpeed = 1;
         targetCount = 0;
+        Cursor.visible = true;
         SceneManager.LoadScene(SceneManager.GetActiveScene().name);
     }
 }
