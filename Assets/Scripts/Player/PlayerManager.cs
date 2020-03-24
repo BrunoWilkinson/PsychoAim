@@ -5,7 +5,7 @@ using UnityEngine;
 public class PlayerManager : MonoBehaviour
 {
     private GameManager _gameManager;
-    private IAim _aim;
+    private IMouseLook _mouseLook;
     private IMovement _movement;
     private IRayProvider _rayProvider;
     private IFireInput _fireInput;
@@ -16,7 +16,7 @@ public class PlayerManager : MonoBehaviour
         _gameManager = GameObject.Find("GameManager").GetComponent<GameManager>();
         _rayProvider = GetComponent<IRayProvider>();
         _fireInput = GetComponent<IFireInput>();
-        _aim = GetComponent<IAim>();
+        _mouseLook = GetComponent<IMouseLook>();
         _movement = GetComponent<IMovement>();
     }
 
@@ -35,7 +35,7 @@ public class PlayerManager : MonoBehaviour
             {
                 _gameManager.GameOver();
             }
-            _aim.Move();
+            _mouseLook.Move();
         }
     }
 
