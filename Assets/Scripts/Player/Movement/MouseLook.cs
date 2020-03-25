@@ -41,6 +41,18 @@ public class MouseLook : MonoBehaviour, IMouseLook
         _cameraTransform.localRotation = _cameraTargetRot;
     }
 
+    public void LockCursor()
+    {
+        Cursor.visible = false;
+        Cursor.lockState = CursorLockMode.Locked;
+    }
+
+    public void UnlockCursor()
+    {
+        Cursor.visible = true;
+        Cursor.lockState = CursorLockMode.None;
+    }
+
     private Quaternion ClampRotationAroundXAxis(Quaternion q)
     {
         q.x /= q.w;

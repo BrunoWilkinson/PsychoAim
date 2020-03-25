@@ -6,46 +6,21 @@ using UnityEngine.SceneManagement;
 
 public class GameManager : MonoBehaviour
 {
-    public static int waveCount = 0;
     public static bool gameOver = true;
+    public static bool onDeath = false;
     public static float targetSpeed = 1f;
+    public static int waveCount = 0;
     public static int targetCount = 0;
 
-    [SerializeField] private GameObject _startScreen = null;
-    [SerializeField] private GameObject _playScreen = null;
-    [SerializeField] private GameObject _restartScreen = null;
-
-    private IPlayUI _playUI;
-    private IRestartUI _restartUI;
-
-    private void Awake()
-    {
-        _playUI = GetComponent<IPlayUI>();
-        _restartUI = GetComponent<IRestartUI>();
-    }
-
-    void Update()
-    {
-        _playUI.UpdateText();
-    }
-
-    public void StartGame()
+    public static void StartGame()
     {
         gameOver = false;
-        _startScreen.SetActive(false);
-        _playScreen.SetActive(true);
-        Cursor.visible = false;
-        Cursor.lockState = CursorLockMode.Locked;
     }
 
-    public void GameOver()
+    public static void GameOver()
     {
         gameOver = true;
-        _restartScreen.SetActive(true);
-        _playScreen.SetActive(false);
-        _restartUI.SetText();
-        Cursor.visible = true;
-        Cursor.lockState = CursorLockMode.None;
+        onDeath = true;
     }
 
     public void RestartGame()
@@ -53,7 +28,7 @@ public class GameManager : MonoBehaviour
         waveCount = 0;
         targetSpeed = 1;
         targetCount = 0;
-        Cursor.visible = true;
+        onDeath = false;
         SceneManager.LoadScene(SceneManager.GetActiveScene().name);
     }
 }

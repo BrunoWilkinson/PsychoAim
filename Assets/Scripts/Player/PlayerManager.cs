@@ -4,7 +4,6 @@ using UnityEngine;
 
 public class PlayerManager : MonoBehaviour
 {
-    private GameManager _gameManager;
     private IMouseLook _mouseLook;
     private IMovement _movement;
     private IRayProvider _rayProvider;
@@ -13,7 +12,6 @@ public class PlayerManager : MonoBehaviour
 
     void Awake()
     {
-        _gameManager = GameObject.Find("GameManager").GetComponent<GameManager>();
         _rayProvider = GetComponent<IRayProvider>();
         _fireInput = GetComponent<IFireInput>();
         _mouseLook = GetComponent<IMouseLook>();
@@ -33,9 +31,13 @@ public class PlayerManager : MonoBehaviour
             }
             if (_movement.OutOfBound())
             {
-                _gameManager.GameOver();
+                GameManager.GameOver();
             }
             _mouseLook.Move();
+            _mouseLook.LockCursor();
+        } else
+        {
+            _mouseLook.UnlockCursor();
         }
     }
 
@@ -43,7 +45,7 @@ public class PlayerManager : MonoBehaviour
     {
         if (collision.gameObject.CompareTag("Target"))
         {
-            _gameManager.GameOver();
+            GameManager.GameOver();
         }
     }
 }

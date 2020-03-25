@@ -444,12 +444,12 @@ GameObject:
   - component: {fileID: 38323710}
   - component: {fileID: 38323709}
   m_Layer: 5
-  m_Name: Settings
+  m_Name: SettingsScreen
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!224 &38323708
 RectTransform:
   m_ObjectHideFlags: 0
@@ -619,8 +619,6 @@ GameObject:
   m_Component:
   - component: {fileID: 71262388}
   - component: {fileID: 71262390}
-  - component: {fileID: 71262389}
-  - component: {fileID: 71262387}
   m_Layer: 0
   m_Name: GameManager
   m_TagString: Untagged
@@ -628,20 +626,6 @@ GameObject:
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
   m_IsActive: 1
---- !u!114 &71262387
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 71262386}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 1afac175d61fa4b4aa9d12e6a6d69574, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  _waveTotalText: {fileID: 1268825145}
-  _targetTotalText: {fileID: 2075843373}
 --- !u!4 &71262388
 Transform:
   m_ObjectHideFlags: 0
@@ -656,20 +640,6 @@ Transform:
   m_Father: {fileID: 0}
   m_RootOrder: 5
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!114 &71262389
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 71262386}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 15e45f542bf24714daa2e9251ee7dab1, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  _waveCountText: {fileID: 311369971}
-  _targetCountText: {fileID: 1198257363}
 --- !u!114 &71262390
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -682,9 +652,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 8bf7c8072fb5e9642b6a875d2a1d34c8, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  _startScreen: {fileID: 1880383258}
-  _playScreen: {fileID: 1378302898}
-  _restartScreen: {fileID: 1131257738}
 --- !u!1 &94078474
 GameObject:
   m_ObjectHideFlags: 0
@@ -1664,7 +1631,7 @@ RectTransform:
   m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0, y: 0}
-  m_AnchorMax: {x: 0, y: 0}
+  m_AnchorMax: {x: 0, y: 1}
   m_AnchoredPosition: {x: 0, y: 0}
   m_SizeDelta: {x: 20, y: 0}
   m_Pivot: {x: 0.5, y: 0.5}
@@ -3128,6 +3095,9 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 756642471}
+  - component: {fileID: 756642474}
+  - component: {fileID: 756642473}
+  - component: {fileID: 756642472}
   m_Layer: 0
   m_Name: UI
   m_TagString: Untagged
@@ -3153,6 +3123,49 @@ Transform:
   m_Father: {fileID: 0}
   m_RootOrder: 6
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &756642472
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 756642470}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 1afac175d61fa4b4aa9d12e6a6d69574, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  _waveTotalText: {fileID: 1268825145}
+  _targetTotalText: {fileID: 2075843373}
+--- !u!114 &756642473
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 756642470}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 15e45f542bf24714daa2e9251ee7dab1, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  _waveCountText: {fileID: 311369971}
+  _targetCountText: {fileID: 1198257363}
+--- !u!114 &756642474
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 756642470}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: e023e9c7c199c954a9df92b5ab5b9e44, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  startScreen: {fileID: 1880383258}
+  playScreen: {fileID: 1378302898}
+  restartScreen: {fileID: 1131257738}
 --- !u!1 &794381460
 GameObject:
   m_ObjectHideFlags: 0
@@ -4863,7 +4876,7 @@ GameObject:
   - component: {fileID: 1131257741}
   - component: {fileID: 1131257740}
   m_Layer: 5
-  m_Name: RestartGame
+  m_Name: RestartScreen
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -6439,7 +6452,7 @@ GameObject:
   - component: {fileID: 1378302900}
   - component: {fileID: 1378302899}
   m_Layer: 5
-  m_Name: PlayGame
+  m_Name: PlayScreen
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -7507,8 +7520,8 @@ MonoBehaviour:
   m_OnClick:
     m_PersistentCalls:
       m_Calls:
-      - m_Target: {fileID: 71262390}
-        m_MethodName: StartGame
+      - m_Target: {fileID: 756642474}
+        m_MethodName: StartGameUI
         m_Mode: 1
         m_Arguments:
           m_ObjectArgument: {fileID: 0}
@@ -7851,7 +7864,7 @@ RectTransform:
   m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0, y: 0}
-  m_AnchorMax: {x: 0, y: 0}
+  m_AnchorMax: {x: 0, y: 1}
   m_AnchoredPosition: {x: 0, y: 0}
   m_SizeDelta: {x: 10, y: 0}
   m_Pivot: {x: 0.5, y: 0.5}
@@ -8365,12 +8378,12 @@ GameObject:
   - component: {fileID: 1880383260}
   - component: {fileID: 1880383259}
   m_Layer: 5
-  m_Name: StartGame
+  m_Name: StartScreen
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 0
+  m_IsActive: 1
 --- !u!114 &1880383259
 MonoBehaviour:
   m_ObjectHideFlags: 0
