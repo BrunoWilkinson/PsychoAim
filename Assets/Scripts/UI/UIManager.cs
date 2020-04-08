@@ -6,6 +6,7 @@ public class UIManager : MonoBehaviour
     [SerializeField] private GameObject startScreen = null;
     [SerializeField] private GameObject playScreen = null;
     [SerializeField] private GameObject restartScreen = null;
+    [SerializeField] private GameObject settingsScreen = null;
 
     private IPlayUI _playUI;
     private IRestartUI _restartUI;
@@ -39,5 +40,22 @@ public class UIManager : MonoBehaviour
         restartScreen.SetActive(true);
         playScreen.SetActive(false);
         _restartUI.SetText();
+    }
+
+    public void SettingsGameUI()
+    {
+        startScreen.SetActive(false);
+        settingsScreen.SetActive(true);
+    }
+
+    public void ExitGameUI()
+    {
+        Application.Quit();
+    }
+
+    public void SaveGameUI()
+    {
+        startScreen.SetActive(true);
+        settingsScreen.SetActive(false);
     }
 }
