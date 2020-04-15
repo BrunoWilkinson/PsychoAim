@@ -23,12 +23,11 @@ public class GameManager : MonoBehaviour
         onDeath = true;
     }
 
-    public void RestartGame()
+    public static void ResetGame()
     {
         waveCount = 0;
         targetSpeed = 1;
         targetCount = 0;
         onDeath = false;
-        SceneManager.LoadScene(SceneManager.GetActiveScene().name);
     }
 }

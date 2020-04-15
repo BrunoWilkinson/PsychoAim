@@ -4,7 +4,7 @@ using UnityEngine;
 
 public class MouseLook : MonoBehaviour, IMouseLook
 {
-    [SerializeField] private float sensitivity = 2f;
+    public float sensitivity = 2f;
 
     private float _xMin = -90f;
     private float _xMax = 90f;
@@ -53,6 +53,11 @@ public class MouseLook : MonoBehaviour, IMouseLook
         Cursor.lockState = CursorLockMode.None;
     }
 
+    public void SetSensitivity(string sens)
+    {
+        sensitivity = float.Parse(sens);
+    }
+
     private Quaternion ClampRotationAroundXAxis(Quaternion q)
     {
         q.x /= q.w;
@@ -68,5 +73,4 @@ public class MouseLook : MonoBehaviour, IMouseLook
 
         return q;
     }
-
 }

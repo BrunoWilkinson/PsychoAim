@@ -50,4 +50,9 @@ public class Movement : MonoBehaviour, IMovement
     {
         return transform.position.y < _outOfBound;
     }
+
+    public void ResetPosition()
+    {
+        transform.position = new Vector3(0, 1.16f, 0);
+    }
 }

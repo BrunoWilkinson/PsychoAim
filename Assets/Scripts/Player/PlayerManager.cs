@@ -37,6 +37,7 @@ public class PlayerManager : MonoBehaviour
             _mouseLook.LockCursor();
         } else
         {
+            _movement.ResetPosition();
             _mouseLook.UnlockCursor();
         }
     }

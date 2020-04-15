@@ -5,4 +5,6 @@
     void LockCursor();
 
     void UnlockCursor();
+
+    void SetSensitivity(string sens);
 }

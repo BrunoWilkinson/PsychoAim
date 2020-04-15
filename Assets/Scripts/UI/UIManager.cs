@@ -42,6 +42,15 @@ public class UIManager : MonoBehaviour
         _restartUI.SetText();
     }
 
+    public void MainMenuGameUI()
+    {
+        startScreen.SetActive(true);
+        playScreen.SetActive(false);
+        restartScreen.SetActive(false);
+        settingsScreen.SetActive(false);
+        GameManager.ResetGame();
+    }
+
     public void SettingsGameUI()
     {
         startScreen.SetActive(false);

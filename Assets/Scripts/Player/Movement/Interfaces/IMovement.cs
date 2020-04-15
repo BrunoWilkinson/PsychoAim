@@ -4,4 +4,5 @@
     void Jump();
     void Gravity();
     bool OutOfBound();
+    void ResetPosition();
 }
