@@ -8,7 +8,7 @@ public class GameManager : MonoBehaviour
 {
     public static bool gameOver = true;
     public static bool onDeath = false;
-    public static float targetSpeed = 1f;
+    public static float targetSpeed = 2f;
     public static int waveCount = 0;
     public static int targetCount = 0;
 

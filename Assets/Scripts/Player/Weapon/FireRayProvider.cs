@@ -5,6 +5,13 @@ using UnityEngine;
 public class FireRayProvider : MonoBehaviour, IRayProvider
 {
     private RaycastHit _hitProvider;
+    private AudioSource _hitAudio;
+
+    void Start()
+    {
+        _hitAudio = gameObject.GetComponent<AudioSource>();
+    }
+
     public bool CreateRay()
     {
         var ray = Camera.main.ScreenPointToRay(Input.mousePosition);
@@ -24,6 +31,7 @@ public class FireRayProvider : MonoBehaviour, IRayProvider
             {
                 GameManager.targetCount++;
                 Destroy(_hitProvider.transform.gameObject);
+                _hitAudio.Play();
             }
         }
     }

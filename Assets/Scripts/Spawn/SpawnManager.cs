@@ -26,7 +26,8 @@ public class SpawnManager : MonoBehaviour
                 _difficulty.UpSpeed();
                 _spawn.All(GameManager.waveCount);
             }
-        } else
+        } 
+        else
         {
             _destroy.All();
         }
