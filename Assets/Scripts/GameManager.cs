@@ -12,15 +12,24 @@ public class GameManager : MonoBehaviour
     public static int waveCount = 0;
     public static int targetCount = 0;
 
+    private static AudioSource _backgroundMusic;
+
+    private void Start()
+    {
+        _backgroundMusic = gameObject.GetComponent<AudioSource>();
+    }
+
     public static void StartGame()
     {
         gameOver = false;
+        _backgroundMusic.Play();
     }
 
     public static void GameOver()
     {
         gameOver = true;
         onDeath = true;
+        _backgroundMusic.Stop();
     }
 
     public static void ResetGame()
