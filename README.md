@@ -1,6 +1,6 @@
-Simple aim warmup game, just click on the targets around you without getting touch by them or otherwise you have to start back to wave 1!
+Simple aim warm up game, just click on the surrounding targets without getting touch by them, or otherwise you have to start back to wave 1!
 
-Try to beat your best score! But the real goal of the game is to warmup before playing your favourite FPS game and start popping!
+Try to beat your best score! But the real goal of the game is to warm up before playing your favourite FPS game and start popping!
 
 If you have any suggestions add them in the comment section below, I'm open to feedback!
 
@@ -13,5 +13,9 @@ Controls:
 - Space bar to Jump
 
 Thank you for playing!
+
+Itch.io:
+
+https://brunowilkinson.itch.io/psycho-aim
 
 v1.0.0
